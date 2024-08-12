@@ -11,6 +11,16 @@ where
     fn update(&mut self, src: &S, tgt: &T);
 }
 
+impl BackwardDynEdge<Publisher, Article, Instant, f64> for Published {
+    fn backward_corr(&self, src: &Publisher, tgt: &Article) {
+        todo!()
+    }
+
+    fn update(&mut self, src: &Publisher, tgt: &Article) {
+        todo!()
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

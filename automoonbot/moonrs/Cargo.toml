@@ -14,6 +14,7 @@ cached = "0.53.1"
 lazy_static = "1.5.0"
 katex-doc = "0.1.0"
 http = "1.1.0"
+rand = "0.8.5"
 
 [features]
 python = ["pyo3"]

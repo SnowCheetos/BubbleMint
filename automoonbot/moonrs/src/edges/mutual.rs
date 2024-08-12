@@ -113,7 +113,4 @@ impl MutualDynEdge<Company, Equity, Instant, FinancialStatement, PriceAggregate>
 
 mod tests {
     use super::*;
-
-    #[test]
-    fn test_mirrors() {}
 }

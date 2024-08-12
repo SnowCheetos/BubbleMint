@@ -43,7 +43,7 @@ class HeteroGraphWrapper(HeteroGraph):
 
     def add_equity(self, symbol: str, company: str, capacity: int) -> None:
         super().add_equity(symbol, company, capacity)
-        if len(company) > 0 and not super().has_node(symbol):
+        if len(company) > 0 and not super().has_node(company):
             # symbols = self.av.get_symbols(company)
             # if not symbols["ok"]:
             #     return
