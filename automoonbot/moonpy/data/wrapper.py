@@ -22,9 +22,6 @@ class HeteroGraphWrapper(HeteroGraph):
         ret = HeteroData()
         data = super().to_pyg()
 
-    def update(self):
-        pass
-
     def remove_node(self, name: str) -> None:
         super().remove_node(name)
 
@@ -63,3 +60,35 @@ class HeteroGraphWrapper(HeteroGraph):
 
     def add_option(self, symbol: str, strike: float, capacity: int) -> None:
         super().add_option(symbol, strike, capacity)
+
+    def update_currency(
+        self,
+        symbol: str,
+        timestamp: float,
+        duration: float,
+        adjusted: bool,
+        open: float,
+        close: float,
+        high: float,
+        low: float,
+        volume: float,
+    ) -> None:
+        super().update_currency(
+            symbol, timestamp, duration, adjusted, open, close, high, low, volume
+        )
+
+    def update_equity(
+        self,
+        symbol: str,
+        timestamp: float,
+        duration: float,
+        adjusted: bool,
+        open: float,
+        close: float,
+        high: float,
+        low: float,
+        volume: float,
+    ) -> None:
+        super().update_equity(
+            symbol, timestamp, duration, adjusted, open, close, high, low, volume
+        )

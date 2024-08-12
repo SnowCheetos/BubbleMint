@@ -99,6 +99,9 @@ impl HeteroGraph {
 
     fn compute_dir_edge(&self, src: NodeIndex, tgt: NodeIndex) -> Option<EdgeType> {
         if let (Some(source), Some(target)) = (self.get_node(src), self.get_node(tgt)) {
+            if let Some(_) = self.edge_memo.get(&(src, tgt)) {
+                return None;
+            }
             return match (source, target) {
                 (NodeType::TestNode(source), NodeType::TestNode(target)) => {
                     TestEdge::try_new(src, tgt, source, target).map(|edge| edge.into())
